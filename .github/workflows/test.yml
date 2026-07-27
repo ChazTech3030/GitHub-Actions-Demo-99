@@ -7,5 +7,10 @@ jobs:
     steps:
       - name: Greeting
         run: echo "Hello World!"
-      - name: Greeting2
+      - name: Greeting 2
         run: echo "Hello World!"
+  next-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Another Greeting?
+        run: echo "whatever"
