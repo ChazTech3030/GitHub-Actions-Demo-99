@@ -2,14 +2,22 @@ name: Demo Workflow
 on: workflow_dispatch
 
 jobs:
-  demo-job:
+  echo-job1:
     runs-on: ubuntu-latest
     steps:
       - name: Greeting
         run: echo "Hello World!"
-      - name: Greeting 2
-        run: echo "Hello World!"
+      - name: LS
+        run: ls -lart
+  echo-job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting2
+        run: echo "Hello World!2"
+      - name: LS2
+        run: ls -lart
   next-job:
+    needs: [echo-job1, echo-job2]
     runs-on: ubuntu-latest
     steps:
       - name: Another Greeting?
