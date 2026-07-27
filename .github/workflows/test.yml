@@ -13,4 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Another Greeting?
-        run: echo "whatever"
+        run: |
+          echo "whateverrrrrrrrrrrrrrr"
+          echo "show me the money, honey"
