@@ -13,4 +13,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: Artifact Upload
-          path: [artifact_upload, artifact_upload2]
+          path: |
+            artifact_upload
+            artifact_upload2
