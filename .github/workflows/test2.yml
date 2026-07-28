@@ -1,0 +1,14 @@
+name: Demo Workflow 2
+on: workflow_dispatch
+
+jobs:
+  gather-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make File
+        run: echo "Hello World!" >> artifact_upload
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: Artifact Upload
+          path: artifact_upload
