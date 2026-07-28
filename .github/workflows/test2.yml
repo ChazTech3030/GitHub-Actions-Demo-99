@@ -7,8 +7,10 @@ jobs:
     steps:
       - name: Make File
         run: echo "Hello World!" >> artifact_upload
+      - name: Make File 2
+        run: echo "Hello World!" >> artifact_upload2
       - name: Upload Artifact
         uses: actions/upload-artifact@v7
         with:
           name: Artifact Upload
-          path: artifact_upload
+          path: [artifact_upload, artifact_upload2]
